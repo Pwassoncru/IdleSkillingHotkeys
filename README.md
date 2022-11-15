@@ -1,5 +1,6 @@
 # IdleSkillingHotkeys
 Those scripts are a bunch of hotkeys I created for the game Idle Skilling (steam version).
+
 While the people on the official discord do not make the following distinction, I believe that
 a HotKey is very different from scripting. While creating those Hotkeys, I focus entirely on removing
 a boring aspect of the game while not gaining any advantage on other players.
@@ -7,7 +8,7 @@ For example, being able to open treasure bags, boost your tinkering gear, or sim
 without clicking 6000000000 times. This does not gain time, simply gets rid of your boredom.
 
 Remember that there are a lot of issues with those scripts, you can notify them to me in the 'Issues' tab of this repository.
-Same for suggestions.
+Same goes for suggestions/changes.
 
 
 ## Requirements
@@ -25,7 +26,7 @@ If the change is relevant for everyone, don't hesitate creating an issue on this
 ## Hotkeys
 
 |Keys|Area|Effect|
-|:----:|:---:|---|
+|:---:|:---:|---|
 |W|Any|Click 5 times at the position of your mouse. Holding it will spam click|
 |Ctrl + E|Any|Close the script and disable any ongoing hotkey. Very useful if fail|
 |Ctrl + C|Battle|Switch the first line of spells. I am aware that it already exists a hotkey for that, but it is slow|
