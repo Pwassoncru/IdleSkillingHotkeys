@@ -34,9 +34,9 @@ CheckPos()
 	MsgBox "" X " " Y
 }
 
-Repeat(func)
+Repeat(func, time := 10)
 {
 	static toggle := false
 	toggle := !toggle
-	SetTimer(%func%, toggle ? 10 : 0)
+	SetTimer(%func%, toggle ? time : 0)
 }

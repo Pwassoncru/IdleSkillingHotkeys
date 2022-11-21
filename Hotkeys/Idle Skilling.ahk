@@ -18,6 +18,7 @@ CoordMode "Mouse", "Window"  		; Set coordinates of mouse relative to the active
 
 #HotIf WinActive("Idle Skilling ahk_exe IdleSkilling.exe")
 
+
 w:: Click(5)
 
 ^w:: Repeat("Click")
@@ -26,7 +27,6 @@ w:: Click(5)
 
 
 ^c:: SwitchBasicSpells
-
 	
 ^v:: SwitchAdvancedSpells
 
@@ -36,21 +36,27 @@ Right:: NextFlower
 Left:: PrevFlower
 
 
-s:: Repeat("SpamNextCrusade")
-	
+s:: KillNextCrusade
+
+^s:: SpamNextCrusade
+
 r:: ResetAndBoost
 
-^r:: Repeat("ResetAndBoost")
+^r:: SpamBoost
+
 
 x:: ResetAndOpenTreasures
 
-	
-^x:: Repeat("SpamTreasures")
+^x:: SpamTreasures
 
 
 k:: ResetSetup1
 
 t:: ActivateLaser
+
+m:: CrackTheCode
+; 2663
+
 
 d:: FarmTraces
 
@@ -58,12 +64,8 @@ d:: FarmTraces
 
 c:: MaxLevelUp
 
-m:: CrackTheCode
-
-; 2663
 
 #HotIf
-
 
 	
 ^e:: ExitApp

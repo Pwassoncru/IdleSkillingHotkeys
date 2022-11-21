@@ -8,3 +8,14 @@
 	
 	ClickRelative(upgradeTinkerX, upgradeTinkerY, 20)
 }
+
+BoostWithWait()
+{
+	ResetAndBoost
+	Sleep 300
+}
+
+SpamBoost()
+{
+	Repeat("BoostWithWait")
+}

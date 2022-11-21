@@ -3,13 +3,20 @@ NextCrusade()
 	ClickRelative(CrusadeNextX, CrusadeNextY)
 }
 
-SpamNextCrusade(Number)
+KillNextCrusade()
 {
-	Loop Number
-	{
-		Send 2
-		Sleep 2000
-		NextCrusade
-		Sleep 500
-	}
+	NextCrusade
+	Sleep 300
+	Send 2
+}
+
+NextWithWait()
+{
+	KillNextCrusade
+	Sleep 2000
+}
+
+SpamNextCrusade()
+{
+	Repeat("NextWithWait")
 }

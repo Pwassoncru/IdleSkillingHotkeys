@@ -10,12 +10,13 @@ ResetAndOpenTreasures()
 	return
 }
 
-SpamTreasures(Number := 1)
+TreasureWithWait()
 {
-	Loop Number
-	{
-		ResetAndOpenTreasures()
-		Sleep 3000
-	}
-	return
+	ResetAndOpenTreasures
+	Sleep 3000
+}
+
+SpamTreasures()
+{
+	Repeat("TreasureWithWait")
 }
