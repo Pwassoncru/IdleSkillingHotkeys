@@ -27,21 +27,26 @@ If the change is relevant for everyone, don't hesitate creating an issue on this
 
 |Keys|Area|Effect|
 |:---:|:---:|---|
-|W|Any|Click 5 times at the position of your mouse. Holding it will spam click|
-|Ctrl + E|Any|Close the script and disable any ongoing hotkey. Very useful if fail|
-|Ctrl + C|Battle|Switch the first line of spells. I am aware that it already exists a hotkey for that, but it is slow|
-|Ctrl + V|Battle|Switch the second line of spells. Same than above, the provided hotkey are slow|
-|1, 2, 3, 4, 5|Battle|Spell 1 to 5. I did not override those hotkeys, they are already included into the game and works very well.|
-|C|Smithing|Craft 1000M of the selected item|
-|D|Smithing|Farm traces. It will go through all items and craft ~5k items|
-|^D|Smithing|It will go through all items and craft 1000M items|
-|Right Arrow|Botany|Change flower to the next one|
-|Left Arrow|Botany|Change flower to the previous one|
-|Ctrl + R|Boost|Maybe the most useful one. It reset and boost your gear, in tinkering|
-|X|Spelunking|Extract, openbags and jump again|
-|Ctrl + X|Spelunking|Same than above, 10 times|
-|K|Realm|Will create all the needed minions for you. More information in the Realm section|
-|T|Realm|Activates tower laser and comes back to the middle|
+|`W`|Any|Click 5 times at the position of your mouse. Holding it will spam click|
+|`Ctrl + W`|Any|Toggle hotkey for the 'Click' action. See Toggle section|
+|`Ctrl + Q`|Any|Give mouse location. Debug purpose|
+|`Ctrl + E`|Any|Close the script and disable any ongoing hotkey. Very useful if fail|
+|`Ctrl + C`|Battle|Switch the first line of spells. I am aware that it already exists a hotkey for that, but it is slow|
+|`Ctrl + V`|Battle|Switch the second line of spells. Same than above, the provided hotkey are slow|
+|`1`, `2`, `3`, `4`, `5`|Battle|Spell 1 to 5. I did not override those hotkeys, they are already included into the game and works very well.|
+|`C`|Smithing|Craft 1000M of the selected item.|
+|`D`|Smithing|Farm traces. It will go through all items and craft ~5k items|
+|`Ctrl + D`|Smithing|It will go through all items and craft 1000M items|
+|`Right Arrow`|Botany|Change flower to the next one|
+|`Left Arrow`|Botany|Change flower to the previous one|
+|`S`|Crusade|Defeating a crusade and goes next|
+|`Ctrl + S`|Crusade|Toggle action for the action above (crusade + next)|
+|`R`|Boost|Maybe the most useful one. It reset and boost your gear, in tinkering|
+|`Ctrl + R`|Boost|Toggle hotkey for the action above (tinkering boost). Useful to increase boostio level|
+|`X`|Spelunking|Extract, openbags and jump again|
+|`Ctrl + X`|Spelunking|Toggle hotkey for the action above (bag extraction)|
+|`K`|Realm|Will create all the needed minions for you. More information in the Realm section|
+|`T`|Realm|Activates tower laser and comes back to the middle|
 
 ## Realm
 
@@ -54,3 +59,12 @@ I added a hotkey that will create and level up all the minions for you.
 - The default setup provided was one that you could use to abuse Retiarius, before its nerf. Feel free to create/ask for new ones.
 
 The hotkey to activate the tower, in other hands, is easier to use. Stay in the middle panel, and it will come back here automatically.
+
+## Toggles
+
+I added toggled hotkeys. If you press on ```Ctrl + W``` for example, it will repeat the 'Click' action until you press ```Ctrl + C``` again.
+Not all hotkeys are supported, I will add more in the future.
+
+## Vending machine
+
+I added the hotkey ```M``` to bruteforce all vending machine combination. It takes around 8 hours to try them all.
