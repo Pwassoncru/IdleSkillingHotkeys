@@ -18,9 +18,9 @@ Idle Skilling is obviously recommended. Those shortcuts are for the steam versio
 
 ## Usage
 
-Start the script 'Idle Skilling.ahk' (double click on it).
+Start the script ```Idle Skilling.ahk``` (double click on it).
 You can edit the scripts as much as you like by opening them with a text editor.
-You can change the hotkeys in the 'Idle Skilling.ahk' file.
+You can change the hotkeys in the ```Idle Skilling.ahk``` file.
 If the change is relevant for everyone, don't hesitate creating an issue on this repository, I will make the change.
 
 ## Hotkeys
@@ -53,7 +53,7 @@ If the change is relevant for everyone, don't hesitate creating an issue on this
 I added a hotkey that will create and level up all the minions for you.
 - You need to already be on the right panel.
 - You need to have exactly one pet in your barn (to not be interrupted by the first boss death)
-- You can decide the pets to create in 'RealmSetup.ahk':
+- You can decide the pets to create in ```RealmSetup.ahk```:
   - The first five numbers corresponds to the number of each pet you want.
   - the following names are the name of the pets you want. It does not include the first pet (the one already in the barn) and it needs to be in the order 'pigs, rocks, eggs, ogres, torches'.
 - The default setup provided was one that you could use to abuse Retiarius, before its nerf. Feel free to create/ask for new ones.
