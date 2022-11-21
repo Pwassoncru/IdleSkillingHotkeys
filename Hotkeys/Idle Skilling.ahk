@@ -8,15 +8,21 @@ CoordMode "Mouse", "Window"  		; Set coordinates of mouse relative to the active
 #include Spells.ahk
 #include Botany.ahk
 #include Tinkering.ahk
+#include Crusades.ahk
 #include Spelunking.ahk
 #include Realm.ahk
 #include RealmSetups.ahk
 #include Smithing.ahk
+#include VendingMachine.ahk
 
 
-#HotIf WinActive("Idle Skilling")
+#HotIf WinActive("Idle Skilling ahk_exe IdleSkilling.exe")
 
-w:: SpamClick(5)
+w:: Click(5)
+
+^w:: Repeat("Click")
+
+^q:: CheckPos
 
 
 ^c:: SwitchBasicSpells
@@ -29,16 +35,17 @@ Right:: NextFlower
 
 Left:: PrevFlower
 
-	
-	
-^r:: ResetAndBoost
 
+s:: Repeat("SpamNextCrusade")
+	
+r:: ResetAndBoost
 
+^r:: Repeat("ResetAndBoost")
 
 x:: ResetAndOpenTreasures
 
 	
-^x:: SpamTreasures(10)
+^x:: Repeat("SpamTreasures")
 
 
 k:: ResetSetup1
@@ -51,7 +58,12 @@ d:: FarmTraces
 
 c:: MaxLevelUp
 
-	
-^e:: ExitApp
+m:: CrackTheCode
+
+; 2663
 
 #HotIf
+
+
+	
+^e:: ExitApp

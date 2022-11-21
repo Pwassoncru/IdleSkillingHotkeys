@@ -1,9 +1,9 @@
 NextFlower()
 {
-	ClickRelativeWithComeBack(nextFlowerX, nextFlowerY)
+	ClickRelative(nextFlowerX, nextFlowerY)
 }
 
 PrevFlower()
 {
-	ClickRelativeWithComeBack(prevFlowerX, prevFlowerY)
+	ClickRelative(prevFlowerX, prevFlowerY)
 }

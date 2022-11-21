@@ -1,21 +1,22 @@
-Click()
+Click(NumberOfClicks := 1)
 {
 	MouseGetPos(&XMousePos, &YMousePos)
-	MouseClick("left", XMousePos, YMousePos)
+	ControlClick("x" XMousePos " y" YMousePos,"ahk_exe IdleSkilling.exe",,"left", NumberOfClicks)
 }
 
-ClickRelative(X, Y)
+ClickRelative(X, Y, NumberOfClicks := 1)
 {
-	WinGetPos(&XWinSize, &YWinSize, &WinWidth, &WinHeight, "A")
+	WinGetPos(&XWinSize, &YWinSize, &WinWidth, &WinHeight, "ahk_exe IdleSkilling.exe")
 	XMouseClick := X * WinWidth
 	YMouseClick := Y * WinHeight
-	MouseClick("left", XMouseClick, YMouseClick)
-	return
+	ControlClick("x" XMouseClick " y" YMouseClick,"ahk_exe IdleSkilling.exe",,"left", NumberOfClicks)
+	; Debugging purposes
+	; MouseClick("left", XMouseClick, YMouseClick)
 }
 
 ClickRelativeExplicitEvents(X, Y)
 {
-	WinGetPos(&XWinSize, &YWinSize, &WinWidth, &WinHeight, "A")
+	WinGetPos(&XWinSize, &YWinSize, &WinWidth, &WinHeight, "ahk_exe IdleSkilling.exe")
 	XMouseClick := X * WinWidth
 	YMouseClick := Y * WinHeight
 	MouseClick("left", XMouseClick, YMouseClick,,, "D")
@@ -24,36 +25,18 @@ ClickRelativeExplicitEvents(X, Y)
 	return
 }
 
-ClickRelativeWithComeBack(X, Y)
+CheckPos()
 {
+	WinGetPos(&XWinSize, &YWinSize, &WinWidth, &WinHeight, "ahk_exe IdleSkilling.exe")
 	MouseGetPos(&XMousePos, &YMousePos)
-	ClickRelative(X, Y)
-	Sleep 50
-	
-	MouseMove(XMousePos, YMousePos)
-	return
+	X := XMousePos / WinWidth
+	Y := YMousePos / WinHeight
+	MsgBox "" X " " Y
 }
 
-SpamClick(Number, speed := 50)
+Repeat(func)
 {
-	MouseGetPos(&XMousePos, &YMousePos)
-	Loop Number
-	{
-		MouseClick("left", XMousePos, YMousePos)
-		Sleep speed
-	}
-	return
-}
-
-SpamClickAt(X, Y, Number, speed := 50)
-{
-	WinGetPos(&XWinSize, &YWinSize, &WinWidth, &WinHeight, "A")
-	XMouseClick := X * WinWidth
-	YMouseClick := Y * WinHeight
-	Loop Number
-	{
-		MouseClick("left", XMouseClick, YMouseClick)
-		Sleep speed
-	}
-	return
+	static toggle := false
+	toggle := !toggle
+	SetTimer(%func%, toggle ? 10 : 0)
 }

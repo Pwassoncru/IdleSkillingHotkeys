@@ -1,13 +1,15 @@
-﻿global spellSwitchX := 0.26
-global spellSwitchY := 0.80
-global spell2SwitchX := 0.23
-global spell2SwitchY := 0.93
+﻿global spellSwitchX := 0.25
+global spellSwitchY := 0.83
+global spell2SwitchX := 0.22
+global spell2SwitchY := 0.95
 
 global nextFlowerX := 0.69
 global nextFlowerY := 0.775
 global prevFlowerX := 0.61
 global prevFlowerY := 0.775
 
+global CrusadeNextX := 0.88
+global CrusadeNextY := 0.8
 global resetTinkerX := 0.45
 global resetTinkerY := 0.58
 global confirmTinkerX := 0.45
@@ -66,3 +68,8 @@ global SmithItemX := 0.77
 global SmithItemY := 0.32
 global SmithItemShiftX := 0.06
 global SmithItemShiftY := 0.18
+
+global VendingMachineNumX := 0.71
+global VendingMachineNumY := 0.36
+global VendingMachineShiftX := 0.027
+global VendingMachineShiftY := 0.05

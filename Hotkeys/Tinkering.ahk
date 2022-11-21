@@ -6,5 +6,5 @@
 	ClickRelative(confirmTinkerX, confirmTinkerY)
 	Sleep 100
 	
-	SpamClickAt(upgradeTinkerX, upgradeTinkerY, 20)
+	ClickRelative(upgradeTinkerX, upgradeTinkerY, 20)
 }

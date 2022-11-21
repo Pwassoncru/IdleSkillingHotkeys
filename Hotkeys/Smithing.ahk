@@ -1,12 +1,12 @@
 ClassicLevelUp()
 {
-	SpamClickAt(SmithCraftX, SmithCraftY, 5, 100)
+	ClickRelative(SmithCraftX, SmithCraftY, 5)
 	Sleep 2000
 }
 
 BulkLevelUp()
 {
-	SpamClickAt(SmithBulkCraftX, SmithBulkCraftY, 9, 100)
+	ClickRelative(SmithBulkCraftX, SmithBulkCraftY, 9)
 }
 
 MaxLevelUp()

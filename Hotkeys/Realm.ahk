@@ -1,6 +1,6 @@
 LevelUp(Number)
 {
-	SpamClickAt(RealmRightX, RealmRightY, Number, 65)
+	ClickRelative(RealmRightX, RealmRightY, Number)
 }
 
 UpgradeRight(Number)
@@ -93,35 +93,35 @@ SummonPigs(Number)
 {
     ClickRelative(PetFirstColX, PetFirstLineY)
 	Sleep 200
-	SpamClickAt(SummonX, SummonY, Number)
+	ClickRelative(SummonX, SummonY, Number)
 }
 
 SummonRocks(Number)
 {
     ClickRelative(PetSecondColX, PetFirstLineY)
 	Sleep 200
-	SpamClickAt(SummonX, SummonY, Number)
+	ClickRelative(SummonX, SummonY, Number)
 }
 
 SummonEggs(Number)
 {
     ClickRelative(PetThirdColX, PetFirstLineY)
 	Sleep 200
-	SpamClickAt(SummonX, SummonY, Number)
+	ClickRelative(SummonX, SummonY, Number)
 }
 
 SummonOgres(Number)
 {
     ClickRelative(PetFirstColX, PetSecondLineY)
 	Sleep 200
-	SpamClickAt(SummonX, SummonY, Number)
+	ClickRelative(SummonX, SummonY, Number)
 }
 
 SummonTorches(Number)
 {
     ClickRelative(PetSecondColX, PetSecondLineY)
 	Sleep 200
-	SpamClickAt(SummonX, SummonY, Number)
+	ClickRelative(SummonX, SummonY, Number)
 }
 
 RightPage()
@@ -151,7 +151,6 @@ CloseBuilding()
 
 ActivateLaser()
 {
-	MouseGetPos(&XMousePos, &YMousePos)
 	RightPage()
 	Sleep 500
 	OpenTower()
@@ -159,8 +158,6 @@ ActivateLaser()
 	Laser()
 	Sleep 500
 	LeftPage()
-	Sleep 50
-	MouseMove(XMousePos, YMousePos)
 }
 
 global petUpgrades := Map(
