@@ -50,7 +50,7 @@ x:: ResetAndOpenTreasures
 ^x:: SpamTreasures
 
 
-k:: ResetSetup1
+k:: ResetSetup2
 
 t:: ActivateLaser
 

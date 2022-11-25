@@ -25,6 +25,18 @@ ClickRelativeExplicitEvents(X, Y)
 	return
 }
 
+SpamClickRelativeWithDelay(X, Y, NumberOfClicks := 1, Delay := 50)
+{
+	WinGetPos(&XWinSize, &YWinSize, &WinWidth, &WinHeight, "ahk_exe IdleSkilling.exe")
+	XMouseClick := X * WinWidth
+	YMouseClick := Y * WinHeight
+	Loop NumberOfClicks
+	{
+		ControlClick("x" XMouseClick " y" YMouseClick,"ahk_exe IdleSkilling.exe",,"left")
+		Sleep Delay
+	}
+}
+
 CheckPos()
 {
 	WinGetPos(&XWinSize, &YWinSize, &WinWidth, &WinHeight, "ahk_exe IdleSkilling.exe")

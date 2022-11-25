@@ -6,7 +6,7 @@
 	ClickRelative(confirmTinkerX, confirmTinkerY)
 	Sleep 100
 	
-	ClickRelative(upgradeTinkerX, upgradeTinkerY, 20)
+	ClickRelative(upgradeTinkerX, upgradeTinkerY, 25)
 }
 
 BoostWithWait()

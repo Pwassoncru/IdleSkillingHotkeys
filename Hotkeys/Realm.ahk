@@ -1,5 +1,6 @@
 LevelUp(Number)
 {
+	; SpamClickRelativeWithDelay(RealmRightX, RealmRightY, Number, 100)
 	ClickRelative(RealmRightX, RealmRightY, Number)
 }
 
@@ -17,108 +18,149 @@ UpgradeLeft(Number)
 	ClickRelative(RealmLeftX, RealmLeftY)
 }
 
-RRR()
+None()
+{
+}
+
+R()
 {
 	UpgradeRight(9)
-	Sleep 1000
-	UpgradeRight(50)
-	Sleep 1000
-	UpgradeRight(150)
+}
+
+L()
+{
+	UpgradeLeft(11)
+}
+
+RR()
+{
+	R()
+	Sleep 100
+	UpgradeRight(43)
+}
+
+RL()
+{
+	R()
+	Sleep 100
+	UpgradeLeft(43)
+}
+
+LR()
+{
+	L()
+	Sleep 100
+	UpgradeRight(43)
+}
+
+LL()
+{
+	L()
+	Sleep 100
+	UpgradeLeft(43)
+}
+
+RRR()
+{
+	RR()
+	Sleep 100
+	UpgradeRight(154)
 }
 
 RRL()
 {
-	UpgradeRight(9)
-	Sleep 1000
-	UpgradeRight(50)
-	Sleep 1000
-	UpgradeLeft(150)
+	RR()
+	Sleep 100
+	UpgradeLeft(154)
 }
 
 RLR()
 {
-	UpgradeRight(9)
-	Sleep 1000
-	UpgradeLeft(50)
-	Sleep 1000
-	UpgradeRight(150)
+	RL()
+	Sleep 100
+	UpgradeRight(154)
 }
 
 RLL()
 {
-	UpgradeRight(9)
-	Sleep 1000
-	UpgradeLeft(50)
-	Sleep 1000
-	UpgradeLeft(150)
+	RL()
+	Sleep 100
+	UpgradeLeft(154)
 }
 
 LRR()
 {
-	UpgradeLeft(9)
-	Sleep 1000
-	UpgradeRight(50)
-	Sleep 1000
-	UpgradeRight(150)
+	LR()
+	Sleep 100
+	UpgradeRight(154)
 }
 
 LRL()
 {
-	UpgradeLeft(9)
-	Sleep 1000
-	UpgradeRight(50)
-	Sleep 1000
-	UpgradeLeft(150)
+	LR()
+	Sleep 100
+	UpgradeLeft(154)
 }
 
 LLR()
 {
-	UpgradeLeft(9)
-	Sleep 1000
-	UpgradeLeft(50)
-	Sleep 1000
-	UpgradeRight(150)
+	LL()
+	Sleep 100
+	UpgradeRight(154)
 }
 
 LLL()
 {
-	UpgradeLeft(9)
-	Sleep 1000
-	UpgradeLeft(50)
-	Sleep 1000
-	UpgradeLeft(150)
+	LL()
+	Sleep 100
+	UpgradeLeft(154)
 }
 
-SummonPigs(Number)
+Reset()
 {
+	ClickRelative(PetThirdColX, PetSecondLineY)
+}
+
+Pig(Number := 1)
+{
+	Reset()
+	Sleep 50
     ClickRelative(PetFirstColX, PetFirstLineY)
 	Sleep 200
 	ClickRelative(SummonX, SummonY, Number)
 }
 
-SummonRocks(Number)
+Rock(Number := 1)
 {
+	Reset()
+	Sleep 50
     ClickRelative(PetSecondColX, PetFirstLineY)
 	Sleep 200
 	ClickRelative(SummonX, SummonY, Number)
 }
 
-SummonEggs(Number)
+Egg(Number := 1)
 {
+	Reset()
+	Sleep 50
     ClickRelative(PetThirdColX, PetFirstLineY)
 	Sleep 200
 	ClickRelative(SummonX, SummonY, Number)
 }
 
-SummonOgres(Number)
+Ogre(Number := 1)
 {
+	Reset()
+	Sleep 50
     ClickRelative(PetFirstColX, PetSecondLineY)
 	Sleep 200
 	ClickRelative(SummonX, SummonY, Number)
 }
 
-SummonTorches(Number)
+Torch(Number := 1)
 {
+	Reset()
+	Sleep 50
     ClickRelative(PetSecondColX, PetSecondLineY)
 	Sleep 200
 	ClickRelative(SummonX, SummonY, Number)
@@ -152,110 +194,151 @@ CloseBuilding()
 ActivateLaser()
 {
 	RightPage()
-	Sleep 500
+	Sleep 200
 	OpenTower()
-	Sleep 500
+	Sleep 200
 	Laser()
-	Sleep 500
+	Sleep 50
 	LeftPage()
 }
 
 global petUpgrades := Map(
-	"Gemmar", "LLR",
-	"Meltor", "LLR",
-	"Cinderduck", "LLR",
-	"Tundra Orc", "LLR",
+	"Little Piggy", "Pig|None",
+	"Pet Rock", "Rock|None",
+	"Baby Egg", "Egg|None",
+	"Ogre Spawn", "Ogre|None",
+	"Torchy", "Torch|None",
 	
-	"Jekyllar", "LLL",
-	"Pompeille", "LLL",
-	"Phaser Duck", "LLL",
-	"Bulwark Orc", "LLL",
 	
-	"Mammoth", "LRR",
-	"Everest", "LRR",
-	"Echo Delta", "LRR",
-	"Retiarius", "LRR",
+	"Boar", "Pig|L",
+	"Hippo", "Pig|R",
 	
-	"Iceular", "LRL",
-	"Glaciar", "LRL",
-	"Stork", "LRL",
-	"Scissarus", "LRL",
+	"Moutain", "Rock|L",
+	"Asteroid", "Rock|R",
 	
-	"Rainboppo", "RLL",
-	"Gasseon", "RLL",
-	"Crikeydile", "RLL",
-	"Hugh Mungus", "RLL",
+	"Lil Chicken", "Egg|L",
+	"Lizard", "Egg|R",
 	
-	"Tarantuppo", "RLR",
-	"Orbiteer", "RLR",
-	"Eggligator", "RLR",
-	"Musculor", "RLR",
+	"Gobbo", "Ogre|L",
+	"Ogre", "Ogre|R",
 	
-	"Chonkoppo", "RRR",
-	"Martianus", "RRL",
-	"Purpback", "RRL",
-	"Corruptor", "RRL",
 	
-	"Hippemo", "RRR",
-	"Luminavi", "RRR",
-	"Blaken Gold", "RRR",
-	"Big Bone", "RRR")
+	"Chromar", "Pig|LL",
+	"Devilar", "Pig|LR",
+	"Horn Hippo", "Pig|RL",
+	"Beeg Hippo", "Pig|RR",
+
+	"Snowy Peak", "Rock|LL",
+	"Volcano", "Rock|LR",
+	"Jupeter", "Rock|RL",
+	"Astralis", "Rock|RR",
+
+	"Duck", "Egg|LL",
+	"Goose", "Egg|LR",
+	"Crocodile", "Egg|RL",
+	"Iguana", "Egg|RR",
+	
+	"Orc", "Ogre|LL",
+	"Lizardman", "Ogre|LR",
+	"Ogre Giant", "Ogre|RL",
+	"Flesh Ogre", "Ogre|RR",
+
+
+	"Gemmar", "Pig|LLL",
+	"Jekyllar", "Pig|LLR",
+	"Mammoth", "Pig|LRL",
+	"Iceular", "Pig|LRR",
+	"Rainboppo", "Pig|RLL",
+	"Hippemo", "Pig|RLR",
+	"Tarantuppo", "Pig|RRL",
+	"Chonkoppo", "Pig|RRR",
+
+	"Glaciar", "Rock|LLL",
+	"Everest", "Rock|LLR",
+	"Pompeille", "Rock|LRL",
+	"Meltor", "Rock|LRR",
+	"Gasseon", "Rock|RLL",
+	"Orbiteer", "Rock|RLR",
+	"Martianus", "Rock|RRL",
+	"Luminavi", "Rock|RRR",
+	
+	"Phaser Duck", "Egg|LLL",
+	"Cinderduck", "Egg|LLR",
+	"Stork", "Egg|LRL",
+	"Echo Delta", "Egg|LRR",
+	"Crikeydile", "Egg|RLL",
+	"Eggligator", "Egg|RLR",
+	"Purpback", "Egg|RRL",
+	"Blaken Gold", "Egg|RRR",
+
+	"Bulwark Orc", "Ogre|LLL",
+	"Tundra Orc", "Ogre|LLR",
+	"Scissarus", "Ogre|LRL",
+	"Retiarius", "Ogre|LRR",
+	"Hugh Mungus", "Ogre|RLL",
+	"Musculor", "Ogre|RLR",
+	"Corruptor", "Ogre|RRL",
+	"Big Bone", "Ogre|RRR")
 	
 SelectUpgrade(str)
 {
-	%petUpgrades.get(str)%()
+	value := petUpgrades.get(str)
+	array := StrSplit(value, "|")
+	%array[2]%()
+}
+
+SelectSummon(str)
+{
+	value := petUpgrades.get(str)
+	array := StrSplit(value, "|")
+	%array[1]%()
+}
+
+SummonAll(params)
+{
+	for index, param in params
+	{
+		SelectSummon(param)
+	}
 }
 
 UpgradeAll(params)
 {
-	X := BarnX + BarnShiftX
-	Y := BarnY
-	PageY := BarnPage1Y
-	ClickRelative(BarnPage1X, PageY)
+	ix := 1
+	iy := 0
+	iz := 0
+	cols := 4
+	lines := 5
+	ClickRelative(BarnPage1X, BarnPage1Y)
 	Sleep 100
 	for index,param in params
 	{
-		ClickRelative(X, Y)
+		ClickRelative(BarnX + ix * BarnShiftX, BarnY + iy * BarnShiftY)
 		Sleep 100
 		SelectUpgrade(param)
 		Sleep 100
-		if (Mod(index + 1, 4) == 0)
+		ix++
+		if (ix >= cols)
 		{
-			X := BarnX
-			if (Mod(index + 1, 20) == 0)
+			ix := 0
+			iy++
+			if (iy >= lines)
 			{
-				PageY := PageY + BarnPageShiftY
-				ClickRelative(BarnPage1X, PageY)
+				iy := 0
+				iz++
+				ClickRelative(BarnPage1X, BarnPage1Y + iz * BarnPageShiftY)
 				Sleep 100
-				Y := BarnY
-			}
-			else
-			{
-				Y := Y + BarnShiftY
 			}
 		}
-		else
-		{
-			X := X + BarnShiftX
-		}
-		Sleep 500
 	}
 }
 
-Setup(NbPigs, NbRocks, NbEggs, NbOgres, NbTorches, params*)
+Setup(params*)
 {
 	ClickRelative(OpenPortalX, OpenPortalY)
 	Sleep 500
-	SummonPigs(NbPigs)
-	Sleep 500
-	SummonRocks(NbRocks)
-	Sleep 500
-	SummonEggs(NbEggs)
-	Sleep 500
-	SummonOgres(NbOgres)
-	Sleep 500
-	SummonTorches(NbTorches)
-	Sleep 500
+	SummonAll(params)
+	Sleep 100
 	CloseBuilding()
 	Sleep 100
 	ClickRelative(OpenBarnX, OpenBarnY)
