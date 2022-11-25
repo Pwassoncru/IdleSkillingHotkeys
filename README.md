@@ -1,4 +1,5 @@
 # IdleSkillingHotkeys
+
 Those scripts are a bunch of hotkeys I created for the game Idle Skilling (steam version).
 
 While the people on the official discord do not make the following distinction, I believe that
@@ -47,16 +48,17 @@ If the change is relevant for everyone, don't hesitate creating an issue on this
 |`Ctrl + X`|Spelunking|Toggle hotkey for the action above (bag extraction)|
 |`K`|Realm|Will create all the needed minions for you. More information in the Realm section|
 |`T`|Realm|Activates tower laser and comes back to the middle|
+|`A`|Hatchery|Press on Hatch or Keep when on an nest with eggs|
+|`Z`|Hatchery|Press on Trash when on an nest with eggs|
+|`E`|Hatchery|Upgrades the nest. It will ask for how many crowns you want, and your multi level.|
 
 ## Realm
 
 I added a hotkey that will create and level up all the minions for you.
-- You need to already be on the right panel.
 - You need to have exactly one pet in your barn (to not be interrupted by the first boss death)
 - You can decide the pets to create in ```RealmSetup.ahk```:
-  - The first five numbers corresponds to the number of each pet you want.
-  - the following names are the name of the pets you want. It does not include the first pet (the one already in the barn) and it needs to be in the order 'pigs, rocks, eggs, ogres, torches'.
-- The default setup provided was one that you could use to abuse Retiarius, before its nerf. Feel free to create/ask for new ones.
+  - Provide the list of pet names. It will be done in order, and it does not include the first pet (the one already in the barn)
+- Feel free to create/ask for new setups.
 
 The hotkey to activate the tower, in other hands, is easier to use. Stay in the middle panel, and it will come back here automatically.
 

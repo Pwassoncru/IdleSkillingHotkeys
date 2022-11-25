@@ -73,3 +73,14 @@ global VendingMachineNumX := 0.71
 global VendingMachineNumY := 0.36
 global VendingMachineShiftX := 0.027
 global VendingMachineShiftY := 0.05
+
+global HatchX := 0.90
+global HatchY := 0.58
+global TrashX := 0.90
+global TrashY := 0.73
+global HatcheryValueY := 0.24
+global HatcherySpeedY := 0.32
+global HatcherySizeY := 0.4
+global HatcheryCategoryX := 0.80
+global HatcheryUpgradeX := 0.90
+global HatcheryUpgradeY := 0.47

@@ -14,6 +14,7 @@ CoordMode "Mouse", "Window"  		; Set coordinates of mouse relative to the active
 #include RealmSetups.ahk
 #include Smithing.ahk
 #include VendingMachine.ahk
+#include Hatchery.ahk
 
 
 #HotIf WinActive("Idle Skilling ahk_exe IdleSkilling.exe")
@@ -63,6 +64,13 @@ d:: FarmTraces
 ^d:: MaxEverything
 
 c:: MaxLevelUp
+
+
+a:: HatcheryHatch_Keep
+
+z:: HatcheryTrash
+
+e:: HatcheryUpgradeAll
 
 
 #HotIf
