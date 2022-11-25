@@ -335,6 +335,8 @@ UpgradeAll(params)
 
 Setup(params*)
 {
+	RightPage
+	Sleep 500
 	ClickRelative(OpenPortalX, OpenPortalY)
 	Sleep 500
 	SummonAll(params)
