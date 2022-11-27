@@ -84,3 +84,5 @@ global HatcherySizeY := 0.4
 global HatcheryCategoryX := 0.80
 global HatcheryUpgradeX := 0.90
 global HatcheryUpgradeY := 0.47
+global PrestigeX := 0.65
+global PrestigeY := 0.50

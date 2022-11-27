@@ -72,6 +72,8 @@ z:: HatcheryTrash
 
 e:: HatcheryUpgradeAll
 
+^e:: SpamHatcheryUpgradeAll
+
 
 #HotIf
 
