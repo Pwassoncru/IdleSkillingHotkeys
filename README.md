@@ -27,10 +27,10 @@ If the change is relevant for everyone, don't hesitate creating an issue on this
 ## Hotkeys
 
 |Keys|Area|Effect|
-|:---:|:---:|---|
+|:-----:|:---:|---|
 |`W`|Any|Click 5 times at the position of your mouse. Holding it will spam click|
-|`Ctrl + W`|Any|Toggle hotkey for the 'Click' action. It spams click under the mouse cursor. See Toggle section|
-|`Ctrl + Alt + W`|Any|Toggle hotkey for the 'Click' action. It spams things at the initial position. See Toggle section|
+|`Ctrl + W`|Any|Toggle hotkey for the 'Click' action. It spams Click at the current cursor location. See Toggle section|
+|`Ctrl + Alt + W`|Any|Toggle hotkey for the 'Click' action. It spams Click at the initial cursor location. See Toggle section|
 |`Ctrl + Q`|Any|Give mouse location. Debug purpose|
 |`Ctrl + E`|Any|Close the script and disable any ongoing hotkey. Very useful if fail|
 |`Ctrl + C`|Battle|Switch the first line of spells. I am aware that it already exists a hotkey for that, but it is slow|
