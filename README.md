@@ -1,8 +1,8 @@
-# IdleSkillingHotkeys
+# IdleSkillingHotkeys - AutoClicker
 
 Those scripts are a bunch of hotkeys I created for the game Idle Skilling (steam version).
 
-While the people on the official discord do not make the following distinction, I believe that
+While admins on the official discord do not make the following distinction, I believe that
 a HotKey is very different from scripting. While creating those Hotkeys, I focus entirely on removing
 a boring aspect of the game while not gaining any advantage on other players.
 For example, being able to open treasure bags, boost your tinkering gear, or simply change your flower to the next one
