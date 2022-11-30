@@ -24,6 +24,9 @@ w:: Click(5)
 
 ^w:: Repeat("Click")
 
+^!w:: SpamClickSilent
+
+
 ^q:: CheckPos
 
 
@@ -55,8 +58,8 @@ k:: ResetSetup2
 
 t:: ActivateLaser
 
-m:: CrackTheCode
-; 2663
+m:: CrackTheCode(1552)
+; 3752
 
 
 d:: FarmTraces

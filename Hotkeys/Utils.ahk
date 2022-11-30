@@ -1,7 +1,14 @@
+ClickAny(X, Y, NumberOfClicks)
+{
+	ControlClick("x" X " y" Y,"ahk_exe IdleSkilling.exe",,"left", NumberOfClicks)
+	; Debugging purposes
+	; MouseClick("left", X, Y)
+}
+
 Click(NumberOfClicks := 1)
 {
 	MouseGetPos(&XMousePos, &YMousePos)
-	ControlClick("x" XMousePos " y" YMousePos,"ahk_exe IdleSkilling.exe",,"left", NumberOfClicks)
+	ClickAny(XMousePos, YMousePos, NumberOfClicks)
 }
 
 ClickRelative(X, Y, NumberOfClicks := 1)
@@ -9,9 +16,7 @@ ClickRelative(X, Y, NumberOfClicks := 1)
 	WinGetPos(&XWinSize, &YWinSize, &WinWidth, &WinHeight, "ahk_exe IdleSkilling.exe")
 	XMouseClick := X * WinWidth
 	YMouseClick := Y * WinHeight
-	ControlClick("x" XMouseClick " y" YMouseClick,"ahk_exe IdleSkilling.exe",,"left", NumberOfClicks)
-	; Debugging purposes
-	; MouseClick("left", XMouseClick, YMouseClick)
+	ClickAny(XMouseClick, YMouseClick, NumberOfClicks)
 }
 
 ClickRelativeExplicitEvents(X, Y)
@@ -32,9 +37,15 @@ SpamClickRelativeWithDelay(X, Y, NumberOfClicks := 1, Delay := 50)
 	YMouseClick := Y * WinHeight
 	Loop NumberOfClicks
 	{
-		ControlClick("x" XMouseClick " y" YMouseClick,"ahk_exe IdleSkilling.exe",,"left")
+		ClickAny(XMouseClick, YMouseClick, 1)
 		Sleep Delay
 	}
+}
+
+SpamClickSilent()
+{
+	MouseGetPos(&XMousePos, &YMousePos)
+	Repeat("ClickAny", 10, XMousePos, YMousePos, 1)
 }
 
 CheckPos()
@@ -46,9 +57,23 @@ CheckPos()
 	MsgBox "" X " " Y
 }
 
-Repeat(func, time := 10)
+Repeat(func, time := 10, params*)
 {
 	static toggle := false
+	static FuncsCalled := Map()
 	toggle := !toggle
-	SetTimer(%func%, toggle ? time : 0)
+	if (toggle)
+	{
+		if (!FuncsCalled.Has(func))
+			FuncsCalled[func] := %func%.Bind(params*)
+		SetTimer(FuncsCalled[func], time)
+	}
+	else
+	{
+		if (FuncsCalled.Has(func))
+		{
+			SetTimer(FuncsCalled[func], 0)
+			FuncsCalled.Delete(func)
+		}
+	}
 }
