@@ -7,7 +7,7 @@ KillNextCrusade()
 {
 	NextCrusade
 	Sleep 300
-	Send 2
+	SendAny(2)
 }
 
 NextWithWait()

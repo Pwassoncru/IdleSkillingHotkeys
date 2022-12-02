@@ -5,6 +5,11 @@ ClickAny(X, Y, NumberOfClicks)
 	; MouseClick("left", X, Y)
 }
 
+SendAny(key)
+{
+	ControlSend(key,,"ahk_exe IdleSkilling.exe")
+}
+
 Click(NumberOfClicks := 1)
 {
 	MouseGetPos(&XMousePos, &YMousePos)
