@@ -35,38 +35,41 @@ If the change is relevant for everyone, don't hesitate creating an issue on this
 |`Ctrl + E`|Any|Close the script and disable any ongoing hotkey. Very useful if fail|
 |`Ctrl + C`|Battle|Switch the first line of spells. I am aware that it already exists a hotkey for that, but it is slow|
 |`Ctrl + V`|Battle|Switch the second line of spells. Same than above, the provided hotkey are slow|
-|`1`, `2`, `3`, `4`, `5`|Battle|Spell 1 to 5. I did not override those hotkeys, they are already included into the game and works very well.|
+|`1`, `2`, `3`, `4`, `5`|Battle|Spell 1 to 5. I did not override those hotkeys, they are already included into the game and work very well.|
 |`C`|Smithing|Craft 1000M of the selected item.|
 |`D`|Smithing|Farm traces. It will go through all items and craft ~5k items|
-|`Ctrl + D`|Smithing|It will go through all items and craft 1000M items|
+|`Ctrl + D`|Smithing|Go through all items and craft 1000M items|
 |`Right Arrow`|Botany|Change flower to the next one|
 |`Left Arrow`|Botany|Change flower to the previous one|
-|`S`|Crusade|Defeating a crusade and goes next|
+|`S`|Crusade|Defeat a crusade and goes next|
 |`Ctrl + S`|Crusade|Toggle action for the action above (crusade + next)|
-|`R`|Boost|Maybe the most useful one. It reset and boost your gear, in tinkering|
+|`R`|Boost|Maybe the most useful one. It resets and boosts your gear|
 |`Ctrl + R`|Boost|Toggle hotkey for the action above (tinkering boost). Useful to increase boostio level|
-|`X`|Spelunking|Extract, openbags and jump again|
+|`X`|Spelunking|Extract, open bags and jump again|
 |`Ctrl + X`|Spelunking|Toggle hotkey for the action above (bag extraction)|
-|`K`|Realm|Will create all the needed minions for you. More information in the Realm section|
-|`T`|Realm|Activates tower laser and comes back to the middle|
+|`K`|Realm|Create all the needed minions for you. More information in the Realm section|
+|`T`|Realm|Activate tower laser and comes back to the middle panel.|
 |`A`|Hatchery|Press on Hatch or Keep when on an nest with eggs|
 |`Z`|Hatchery|Press on Trash when on an nest with eggs|
-|`E`|Hatchery|Upgrades the nest. It will ask for how many crowns you want, and your multi level|
+|`E`|Hatchery|Upgrade the nest. It will ask for how many crowns you want, and your multi level|
 |`^E`|Hatchery|Toggle hotkey for the action above (nest prestige)|
 
-## Realm
+## Realm - Setups
 
-I added a hotkey that will create and level up all the minions for you.
-- You need to have exactly one pet in your barn (to not be interrupted by the first boss death)
+You can provide a setup that will automatically be created/leveled up for you
+- You need to have exactly one pet in your barn (to not be interrupted by the first boss death after a reset)
 - You can decide the pets to create in ```RealmSetup.ahk```:
-  - Provide the list of pet names. It will be done in order, and it does not include the first pet (the one already in the barn)
+  - Provide the list of pet names. They will be created in order, and it does not include the first pet (the one already in the barn)
 - Feel free to create/ask for new setups.
 
-The hotkey to activate the tower, in other hands, is easier to use. Stay in the middle panel, and it will come back here automatically.
+> **Warning**
+>
+> Scissarus will completely mess up the level up of all the minions that are created after it. It is recommended to either
+> create Scissarus last, or to temporarily create a Lizardman instead, and level it up by hand. There is no way to fix this.
 
 ## Toggles
 
-I added toggled hotkeys. If you press on ```Ctrl + W``` for example, it will repeat the 'Click' action until you press ```Ctrl + C``` again.
+I added toggled hotkeys. If you press on ```Ctrl + W``` for example, it will repeat the 'Click' action until you press ```Ctrl + W``` again.
 Not all hotkeys are supported, I will add more in the future.
 
 ## Vending machine
