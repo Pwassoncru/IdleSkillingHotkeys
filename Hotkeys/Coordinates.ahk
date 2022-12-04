@@ -86,3 +86,6 @@ global HatcheryUpgradeX := 0.90
 global HatcheryUpgradeY := 0.47
 global PrestigeX := 0.65
 global PrestigeY := 0.50
+
+global AsylumKnockX := 0.87
+global AsylumKnockY := 0.91

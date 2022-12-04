@@ -1,8 +1,8 @@
 WriteDigit(digit)
 {
-	if (digit > 10)
+	if (digit > 11)
 	{
-		MsgBox "digit > 10: fail"
+		MsgBox "digit > 11: fail"
 	}
 	
 	col := Mod(digit, 3)
@@ -20,6 +20,10 @@ WriteNumber(x1, x2, x3, x4)
 	WriteDigit(x3)
 	Sleep 50
 	WriteDigit(x4)
+	Sleep 100
+	WriteDigit(9)
+	Sleep 100
+	WriteDigit(11)
 }
 
 CrackTheCode(startNumber := 0)
@@ -35,7 +39,7 @@ CrackTheCode(startNumber := 0)
 	while (x1 < 11)
 	{
 		WriteNumber(x1, x2, x3, x4)
-		Sleep 2000
+		Sleep 1800
 		x4++
 		if (x4 > 10)
 		{

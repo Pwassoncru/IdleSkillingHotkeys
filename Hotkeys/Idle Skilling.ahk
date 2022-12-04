@@ -15,6 +15,7 @@ CoordMode "Mouse", "Window"  		; Set coordinates of mouse relative to the active
 #include Smithing.ahk
 #include VendingMachine.ahk
 #include Hatchery.ahk
+#include Asylum.ahk
 
 
 #HotIf WinActive("Idle Skilling ahk_exe IdleSkilling.exe")
@@ -58,8 +59,8 @@ k:: ResetSetup2
 
 t:: ActivateLaser
 
-m:: CrackTheCode(1552)
-; 3752
+m:: CrackTheCode(0)
+; 0
 
 
 d:: FarmTraces
@@ -73,9 +74,14 @@ a:: HatcheryHatch_Keep
 
 z:: HatcheryTrash
 
-e:: HatcheryUpgradeAll
+y:: HatcheryUpgradeAll
 
-^e:: SpamHatcheryUpgradeAll
+^y:: SpamHatcheryUpgradeAll
+
+
+n:: DefeatAsylum
+
+^n:: SpamAsylum
 
 
 #HotIf
