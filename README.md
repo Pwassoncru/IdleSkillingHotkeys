@@ -52,9 +52,9 @@ If the change is relevant for everyone, don't hesitate creating an issue on this
 |`A`|Hatchery|Press on Hatch or Keep when on an nest with eggs|
 |`Z`|Hatchery|Press on Trash when on an nest with eggs|
 |`Y`|Hatchery|Upgrade the nest. It will ask for how many crowns you want, and your multi level|
-|`^Y`|Hatchery|Toggle hotkey for the action above (nest prestige)|
+|`Ctrl + Y`|Hatchery|Toggle hotkey for the action above (nest prestige)|
 |`N`|Asylum boss|Knock Knock then defeats the boss. Compatible with Gorshank. Probably doesn't work with long animation raids (sentinel)|
-|`^N`|Asylum boss|Toggle hotkey for the action above (asylum boss)|
+|`Ctrl + N`|Asylum boss|Toggle hotkey for the action above (asylum boss)|
 
 ## Realm - Setups
 
